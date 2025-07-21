@@ -1,0 +1,34 @@
+import { Spotlight } from "./ui/Spotlight"
+import { cn } from "@/utils/cn"
+
+const Hero = () => {
+  return (
+    <div className="relative pb-20 pt-36">
+      <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 dark:text-white px-4">
+        Geo2Mill is an Analytics SaaS AI-powered for mine-output upturn. <br />
+        Geo2Mill is the worst way to do mining... except for all other ways that have been tried.
+      </h1>
+
+      <div className="pb-20 pt-36">
+        <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
+        <Spotlight className="top-10 left-30 h-[80vh] w-[50vw]" fill="purple" />
+        <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="blue" />
+      </div>
+
+
+      <div className="relative flex h-screen w-full items-center justify-center bg-white dark:bg-black-100">
+        <div
+          className={cn(
+            "absolute inset-0 animate-grid",
+            "[background-size:40px_40px]",
+            "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+            "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+          )}
+        />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
+      </div>
+    </div>
+  )
+}
+
+export default Hero
